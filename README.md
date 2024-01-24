@@ -14,7 +14,7 @@ APIs: https://aqicn.org/api/ https://aqs.epa.gov/aqsweb/documents/data_api.html
 Top Polluted Cities - State Code - County Code
 -Boston, MA - 25 - 025
 -New York, NY - 36 - 061
--Los Angelas, CA - 06 - 019
+-Los Angeles, CA - 06 - 019
 -Bakersfield, CA 06 - 029
 -Visalia, CA - 06 - 107
 -Phoenix Mesa, AZ - 04 - 013

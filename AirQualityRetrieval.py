@@ -32,7 +32,7 @@ def retrieveDataByCity(city, state_code, county_code):
 ##Cities 
 retrieveDataByCity('Boston', '25', '025')
 retrieveDataByCity('New_York', '36', '061')
-retrieveDataByCity('Los_Angelos', '06', '019')
+retrieveDataByCity('Los_Angeles', '06', '019')
 retrieveDataByCity('Bakersfield', '06', '029')
 retrieveDataByCity('Visalia', '06', '107')
 retrieveDataByCity('Phoenix', '04', '013')
