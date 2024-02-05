@@ -27,7 +27,7 @@ def retrieveDataByCity(city, state_code, county_code):
                     sleep(15)
 
     df = pd.json_normalize(json_object_list, "Data")
-    df.to_csv('air_quality_data_' + city + '.csv', index=False)
+    df.to_csv('csv/air_quality_data_' + city + '.csv', index=False)
     
 ##Cities 
 retrieveDataByCity('Boston', '25', '025')

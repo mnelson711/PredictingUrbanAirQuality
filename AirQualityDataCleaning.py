@@ -79,9 +79,9 @@ def clean_file(filename):
     features_to_drop = ['site_number', 'datum', 'sample_duration_code', 'date_local', 'time_local', 'date_of_last_change','cbsa_code']
     cleaned_df = createNewDate(file)
     cleaned_df = dropFeatures(cleaned_df, features_to_drop)
-    cleaned_df = removeMissingRows(cleaned_df, 'aqi')
+    cleaned_df = removeMissingRows(cleaned_df, 'sample_measurement')
     cleaned_df = impute_aqi(cleaned_df)
     cleaned_df.to_csv('aqi_cleaned_Boston.csv', index=False)
 
 if __name__ == "__main__":
-    clean_file("csv/aqi_cleaned_Boston.csv")
+    clean_file("csv/air_quality_data_Boston.csv")

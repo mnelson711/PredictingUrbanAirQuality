@@ -49,7 +49,7 @@ if __name__ == "__main__":
     #     if file.endswith(".csv"):
     #         print(file)
 
-    input_file = "weather_data_Boston.csv"
-    output_file = "weather_data_Boston.csv"
+    input_file = "csv/weather_data_Boston.csv"
+    output_file = "csv/weather_data_Boston.csv"
     remove_column(input_file, output_file, "timezone")
 
