@@ -81,6 +81,7 @@ def clean_file(filename):
     cleaned_df = dropFeatures(cleaned_df, features_to_drop)
     cleaned_df = removeMissingRows(cleaned_df, 'sample_measurement')
     cleaned_df = impute_aqi(cleaned_df)
+    cleaned_df.rename(columns={'time_gmt': 'time'}, inplace=True)
     cleaned_df.to_csv('aqi_cleaned_Boston.csv', index=False)
 
 if __name__ == "__main__":
