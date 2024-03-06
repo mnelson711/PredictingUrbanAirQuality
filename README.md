@@ -25,3 +25,11 @@ Top Polluted Cities - State Code - County Code
 
 Datasets
 https://drive.google.com/drive/folders/14un4PyvOPBtY5UPNKXM_IfL5xD-ZDPL_?usp=drive_link
+
+
+
+TODO (molly)
+impute aqi cat
+run KNN model
+run outlier models
+gather and visualize results

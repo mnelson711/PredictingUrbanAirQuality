@@ -16,7 +16,28 @@ def joinFiles(air_quality_data, weather_data):
     return merged_data
     
 
+# Function to categorize AQI
+def categorize_aqi(aqi):
+    if aqi <= 50:
+        return 'Good'
+    elif aqi <= 100:
+        return 'Moderate'
+    elif aqi <= 150:
+        return 'Unhealthy for Sensitive Groups'
+    elif aqi <= 200:
+        return 'Unhealthy'
+    elif aqi <= 300:
+        return 'Very Unhealthy'
+    else:
+        return 'Hazardous'
+
+
 if __name__ == "__main__":
-    weather_data = pd.read_csv("csv/weather_data_Boston_processed.csv", nrows=1000000)
-    air_quality_data = pd.read_csv("csv/aqi_cleaned_Boston.csv", nrows=1000000)
-    merged_data = joinFiles(air_quality_data, weather_data)
+    # weather_data = pd.read_csv("csv/weather_data_Boston_processed.csv", nrows=1000000)
+    # air_quality_data = pd.read_csv("csv/aqi_cleaned_Boston.csv", nrows=1000000)
+    # merged_data = joinFiles(air_quality_data, weather_data)
+    # Applying the function to create a new column
+    merged_data = pd.read_csv("../csv/merged_data.csv", low_memory=False)
+    merged_data['aqi_cat'] = merged_data['aqi'].apply(categorize_aqi)
+
+
