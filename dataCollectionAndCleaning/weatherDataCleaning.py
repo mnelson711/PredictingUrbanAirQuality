@@ -41,15 +41,43 @@ def impute_visibility(input_file, output_file):
     df = pd.read_csv(input_file)
     df['visibility'] = df['visibility'].fillna(method='ffill')
     df.to_csv(output_file, index=False)
+    
+import pandas as pd
+
+def split_csv_by_city(input_csv_path, output_dir):
+    """
+    Splits a CSV file into multiple CSV files based on the 'city_name' column.
+    
+    Parameters:
+        input_csv_path (str): The path to the input CSV file.
+        output_dir (str): The directory where the output CSV files will be saved.
+    """
+    df = pd.read_csv(input_csv_path)
+    
+    for city in df['city_name'].unique():
+        city_df = df[df['city_name'] == city]
+        output_csv_path = f"{output_dir}/{city.replace(' ', '_').replace('/', '_')}.csv"
+        
+        city_df.to_csv(output_csv_path, index=False)
+        print(f"Saved {output_csv_path}")
+
+# Example usage:
+# split_csv_by_city('path_to_your_large_csv.csv', 'output_directory_path')
+
 
 if __name__ == "__main__":
-# loop for all csv files in the directory
-    # abs_path = os.path.abspath(os.getcwd())
-    # for file in os.listdir("abs_path"):
-    #     if file.endswith(".csv"):
-    #         print(file)
-
-    input_file = "csv/weather_data_Boston.csv"
-    output_file = "csv/weather_data_Boston.csv"
-    remove_column(input_file, output_file, "timezone")
+# split_csv_by_city('../csv/all_cities.csv', '../csv/')
+    cities = ['Bakersfield','Los_Angeles','New_York','Phoenix','Reno','Visalia']
+    
+    
+    for city in cities:
+        input_file = "csv/" + city + ".csv"
+        output_file = "csv/weather_data_" + city + ".csv"
+        columns_to_remove = ['dt_iso', 'timezone', 'sea_level','grnd_level', 'weather_icon']
+        convert_kelvin(input_file, output_file)
+        impute_zeros(output_file, output_file)
+        impute_visibility(output_file, output_file)
+        convert_date(output_file, output_file)
+        for column in columns_to_remove:
+            remove_column(output_file, output_file, column)
 

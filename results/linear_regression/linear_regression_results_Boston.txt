@@ -4,4 +4,6 @@ Model Coefficients: [-2.06363240e+00 -4.66924479e-05  3.52186223e-01  8.95448956
   5.19339786e-03 -5.20114902e-01 -7.35689266e-02  1.75414751e-02]
 Model Intercept: 679.9439635557703
 Mean Squared Error: 185.77
-R-squared Score: 0.2407
+R^2 Score: 0.2407
+Mean Absolute Error: 9.40
+Root Mean Squared Error: 13.6296
