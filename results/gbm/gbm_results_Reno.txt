@@ -1,0 +1,3 @@
+Mean Squared Error (MSE): 0.4686344727831356
+Root Mean Squared Error (RMSE): 0.6845688225322094
+R^2 Score: 0.27675083487495244
