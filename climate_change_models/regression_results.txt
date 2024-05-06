@@ -1,0 +1,7 @@
+Model Coefficients: [[ -0.14269794  -0.23601756   2.53799299  -8.35089843   1.09610643
+   -0.05099995 -11.77208141]]
+Model Intercept: [256.3712429]
+Mean Squared Error: 729.04
+R-squared Score: 0.0733
+Mean Absolute Error: 18.35
+Root Mean Squared Error: 27.0008

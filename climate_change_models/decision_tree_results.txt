@@ -1,0 +1,5 @@
+Mean Absolute Error: 11.87
+Mean Squared Error: 466.24
+Root Mean Squared Error: 21.5926
+R^2 Score: 0.4074
+Explained Variance Score: 0.4074
