@@ -35,7 +35,7 @@ def combine_csv():
 
 
 def info():
-    path = os.path.join(os.getcwd(), "data", "AQI.csv")
+    path = os.path.join(os.getcwd(), "data", "climate_change_AQI.csv")
     df = pd.read_csv(path)
     print(df.info())
     print(df.head())
@@ -162,4 +162,4 @@ def combine_AQI_climate_change():
     )
 
 
-combine_AQI_climate_change()
+# combine_AQI_climate_change()
