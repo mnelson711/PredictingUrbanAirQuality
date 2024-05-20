@@ -1,35 +1,14 @@
-# Data-Analytics-Capstone-AQI
+#Applying Machine Learning to Analyze Air
+Quality's Relationship with Atmospheric Conditions
 
 ## Project Overview
-APIs: https://aqicn.org/api/ https://aqs.epa.gov/aqsweb/documents/data_api.html
 
-## To Do
-- [x] Create a repository ☺
-- [ ] Research APIs
-- [ ] Create script to pull data from APIs
-- [ ] Preprocessing
-- [ ] Prior Research
+This project aims to predict the air quality of urban areas using multiple machine learning models. 
+To learn more, read the paper inside the main directory!
 
+APIs: 
+https://aqicn.org/api/ 
+https://aqs.epa.gov/aqsweb/documents/data_api.html
 
-Top Polluted Cities - State Code - County Code
--Boston, MA - 25 - 025
--New York, NY - 36 - 061
--Los Angeles, CA - 06 - 019
--Bakersfield, CA 06 - 029
--Visalia, CA - 06 - 107
--Phoenix Mesa, AZ - 04 - 013
--Denver, CO - 08 - 031
--Sacramento, CA - 06 - 034
--Fresno, CA - 06 - 010
--Reno, NV - 32 - 031
-
-Datasets
+Datasets:
 https://drive.google.com/drive/folders/14un4PyvOPBtY5UPNKXM_IfL5xD-ZDPL_?usp=drive_link
-
-
-
-TODO (molly)
-impute aqi cat
-run KNN model
-run outlier models
-gather and visualize results
